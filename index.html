@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUHARRIQ. — Set Yourself in Motion</title>
+<title>MUHARRIQ. — Pakistan's #1 Youth Experience Platform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700;900&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 
@@ -257,10 +257,10 @@ nav.scrolled {
 }
 .about-left p { font-size:15px; line-height:1.9; color:var(--tx2); margin-bottom:20px; }
 .about-left p strong { color:var(--tx); font-weight:500; }
-.about-right { position:relative; }
+.about-right { position:relative; display:flex; flex-direction:column; gap:20px; }
 .about-card {
   background:var(--sf); border:1px solid var(--bd);
-  padding:36px 32px; margin-bottom:12px;
+  padding:36px 32px;
   position:relative; overflow:hidden;
   transition:border-color .3s, transform .3s var(--ease);
   cursor:none;
@@ -268,9 +268,8 @@ nav.scrolled {
 .about-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--fire); transform:scaleY(0); transform-origin:bottom; transition:transform .4s var(--ease); }
 .about-card:hover { border-color:var(--bd2); transform:translateX(6px); }
 .about-card:hover::before { transform:scaleY(1); }
-.about-card h4 { font-family:'Cinzel',serif; font-size:13px; font-weight:700; letter-spacing:.1em; color:var(--tx); margin-bottom:8px; }
-.about-card p { font-size:13px; line-height:1.7; color:var(--tx3); }
-.about-stat { font-family:'Cinzel',serif; font-size:32px; font-weight:700; color:var(--fire); }
+.about-card h4 { font-family:'Cinzel',serif; font-size:18px; font-weight:700; letter-spacing:.1em; color:var(--fire); margin-bottom:12px; }
+.about-card p { font-size:14px; line-height:1.7; color:var(--tx2); }
 
 /* ══════════════════════════════════
    DOMAINS
@@ -293,60 +292,63 @@ nav.scrolled {
 .domain-panels { position:relative; }
 .dpanel { display:none; }
 .dpanel.active { display:block; }
-.dpanel-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.dpanel-grid { display:grid; grid-template-columns:1fr; gap:2px; }
 
 .dpanel-main {
   background:var(--sf2); border:1px solid var(--bd);
   padding:56px 52px; position:relative; overflow:hidden;
+  text-align:center;
 }
 .dpanel-main::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 0 0,rgba(232,83,26,.07) 0%,transparent 55%); pointer-events:none; }
 .dp-eyebrow { font-size:9px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--fire); margin-bottom:14px; }
 .dp-title { font-family:'Cinzel',serif; font-size:clamp(22px,3vw,36px); font-weight:700; letter-spacing:.08em; color:var(--tx); margin-bottom:16px; line-height:1.1; }
-.dp-desc { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:300; font-style:italic; color:var(--tx3); line-height:1.6; margin-bottom:32px; }
+.dp-desc { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:300; font-style:italic; color:var(--tx3); line-height:1.6; margin-bottom:32px; max-width:600px; margin-left:auto; margin-right:auto; }
 .dp-icon-wrap { margin-bottom:32px; }
 .dp-icon-wrap svg { width:60px; height:84px; filter:drop-shadow(0 0 18px rgba(232,83,26,.4)); }
-.dp-price-tag { display:inline-flex; align-items:baseline; gap:6px; margin-bottom:28px; }
-.dp-price-from { font-size:10px; color:var(--tx4); letter-spacing:.15em; text-transform:uppercase; }
-.dp-price-amt { font-family:'Cinzel',serif; font-size:28px; font-weight:700; color:var(--tx); }
-.dp-price-unit { font-size:12px; color:var(--tx3); }
-.dp-link { font-family:'Cinzel',serif; font-size:10px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--fire); border-bottom:1px solid rgba(232,83,26,.3); padding-bottom:3px; text-decoration:none; cursor:none; transition:border-color .25s; display:inline-flex; align-items:center; gap:8px; }
-.dp-link:hover { border-color:var(--fire); }
-.dp-link::after { content:'→'; }
 
-.dpanel-list { background:var(--sf3); border:1px solid var(--bd); padding:40px 36px; display:flex; flex-direction:column; justify-content:space-between; }
-.dpanel-act { border-bottom:1px solid var(--bd); padding:16px 0; cursor:none; transition:padding-left .25s; }
-.dpanel-act:first-child { padding-top:0; }
-.dpanel-act:last-child { border-bottom:none; padding-bottom:0; }
-.dpanel-act:hover { padding-left:8px; }
-.dpa-num { font-size:9px; color:var(--fire); letter-spacing:.3em; margin-bottom:4px; }
-.dpa-name { font-size:14px; font-weight:500; color:var(--tx); margin-bottom:2px; }
-.dpa-detail { font-size:12px; color:var(--tx3); }
-
-.dpanel-extra {
-  grid-column:1/-1; background:var(--sf); border:1px solid var(--bd);
-  padding:32px 52px; display:flex; gap:48px; align-items:center; flex-wrap:wrap;
+.dp-mission {
+  background:var(--sf3); border:1px solid var(--bd);
+  padding:48px 52px; text-align:center;
+  margin-top:2px;
 }
-.dpx-stat { }
-.dpx-stat .dpx-n { font-family:'Cinzel',serif; font-size:36px; font-weight:700; color:var(--fire); }
-.dpx-stat .dpx-l { font-size:11px; color:var(--tx4); letter-spacing:.2em; text-transform:uppercase; margin-top:2px; }
-.dpx-divider { width:1px; height:60px; background:var(--bd); }
+.dp-mission p {
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-style:italic;
+  color:var(--tx2);
+  line-height:1.6;
+  max-width:700px;
+  margin:0 auto;
+}
 
 /* ══════════════════════════════════
-   STATS SECTION
+   EVENTS SECTION WITH ADD EVENT FORM
    ══════════════════════════════════ */
-.stats-section { background:var(--sf); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd); padding:80px 56px; }
-.stats-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; }
-.stat-block { padding:48px 40px; background:var(--ink); border:1px solid var(--bd); text-align:center; position:relative; overflow:hidden; transition:border-color .3s; cursor:none; }
-.stat-block::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 100%,rgba(232,83,26,.05) 0%,transparent 60%); }
-.stat-block:hover { border-color:var(--bd2); }
-.stat-num { font-family:'Cinzel',serif; font-size:clamp(36px,4vw,56px); font-weight:700; color:var(--fire); line-height:1; margin-bottom:10px; }
-.stat-num span { color:var(--fire3); }
-.stat-label { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--tx4); font-weight:500; }
-.stat-sub { font-family:'Cormorant Garamond',serif; font-size:14px; font-style:italic; color:var(--tx4); margin-top:8px; }
-
-/* ══════════════════════════════════
-   EVENTS
-   ══════════════════════════════════ */
+.events-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  margin-bottom:48px;
+  gap:20px;
+}
+.add-event-btn {
+  font-family:'Cinzel',serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  background:transparent;
+  border:1px solid var(--fire);
+  color:var(--fire);
+  padding:12px 28px;
+  cursor:none;
+  transition:all .3s var(--ease);
+}
+.add-event-btn:hover {
+  background:var(--fire);
+  color:white;
+}
 .events-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .event-card {
   background:var(--sf2); border:1px solid var(--bd);
@@ -357,7 +359,7 @@ nav.scrolled {
 .event-card:hover { transform:translateY(-8px); border-color:var(--bd2); }
 .event-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 100%,rgba(232,83,26,.1) 0%,transparent 60%); pointer-events:none; opacity:0; transition:opacity .4s; }
 .event-card:hover::before { opacity:1; }
-.event-img { height:220px; position:relative; overflow:hidden; background:var(--sf3); }
+.event-img { height:200px; position:relative; overflow:hidden; background:var(--sf3); }
 .event-img-bg { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
 .event-badge { position:absolute; top:16px; left:16px; font-size:9px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; padding:5px 12px; }
 .event-badge.escape { background:rgba(232,83,26,.15); border:1px solid rgba(232,83,26,.3); color:var(--fire3); }
@@ -382,13 +384,127 @@ nav.scrolled {
 .event-ticket:hover::before { transform:scaleX(1); }
 .event-ticket:hover { color:white; border-color:var(--fire); }
 .event-ticket span { position:relative; }
+.delete-event {
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:rgba(0,0,0,.6);
+  border:1px solid rgba(232,83,26,.3);
+  color:var(--fire);
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:none;
+  font-size:16px;
+  transition:all .25s;
+  z-index:10;
+}
+.delete-event:hover {
+  background:var(--fire);
+  color:white;
+  border-color:var(--fire);
+}
+.featured-event { grid-column:span 2; }
+.featured-event .event-img { height:260px; }
 
-/* Featured event */
-.event-card.featured { grid-column:span 2; }
-.event-card.featured .event-img { height:280px; }
+/* Add Event Modal */
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  z-index:10000;
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:blur(8px);
+}
+.modal.active {
+  display:flex;
+}
+.modal-content {
+  background:var(--ink2);
+  border:1px solid var(--bd);
+  max-width:500px;
+  width:90%;
+  padding:40px;
+  position:relative;
+  animation:modalFade .4s var(--ease);
+}
+@keyframes modalFade {
+  from{opacity:0;transform:scale(.95);}
+  to{opacity:1;transform:scale(1);}
+}
+.modal-close {
+  position:absolute;
+  top:20px;
+  right:20px;
+  font-size:24px;
+  cursor:none;
+  color:var(--tx4);
+  transition:color .25s;
+}
+.modal-close:hover {
+  color:var(--fire);
+}
+.modal h3 {
+  font-family:'Cinzel',serif;
+  font-size:24px;
+  margin-bottom:28px;
+  color:var(--tx);
+}
+.modal input, .modal select, .modal textarea {
+  width:100%;
+  background:var(--sf);
+  border:1px solid var(--bd);
+  padding:12px 16px;
+  margin-bottom:16px;
+  color:var(--tx);
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;
+  outline:none;
+}
+.modal input:focus, .modal select:focus, .modal textarea:focus {
+  border-color:var(--fire);
+}
+.modal textarea {
+  resize:vertical;
+  min-height:80px;
+}
+.modal button {
+  width:100%;
+  background:var(--fire);
+  color:white;
+  border:none;
+  padding:14px;
+  font-family:'Cinzel',serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  cursor:none;
+  margin-top:8px;
+}
+.modal button:hover {
+  background:var(--fire2);
+}
+
+/* Empty state */
+.empty-events {
+  text-align:center;
+  padding:80px;
+  background:var(--sf);
+  border:1px solid var(--bd);
+  color:var(--tx4);
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-style:italic;
+}
 
 /* ══════════════════════════════════
-   EXPERIENCE PARALLAX SECTION
+   EXPERIENCE SECTION
    ══════════════════════════════════ */
 .experience-section {
   min-height:70vh; display:flex; align-items:center;
@@ -506,13 +622,6 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
 .footer-credit { font-size:11px; color:var(--tx4); }
 .footer-rule { width:100%; height:1px; background:linear-gradient(90deg, var(--fire), var(--gold2), var(--fire3)); opacity:.4; margin-bottom:48px; position:relative; }
 
-/* ══════════════════════════════════
-   FLAME ILLUSTRATION HELPERS
-   ══════════════════════════════════ */
-.flame-sm svg { filter:drop-shadow(0 0 12px rgba(232,83,26,.5)); }
-.flame-sm-40 svg { width:40px;height:56px; }
-.flame-sm-28 svg { width:28px;height:40px; }
-
 /* Domain color accents */
 .accent-escape { color:var(--fire); }
 .accent-night  { color:#a98af5; }
@@ -523,9 +632,8 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
    RESPONSIVE
    ══════════════════════════════════ */
 @media(max-width:1024px) {
-  .stats-inner { grid-template-columns:repeat(2,1fr); }
   .events-grid { grid-template-columns:repeat(2,1fr); }
-  .event-card.featured { grid-column:span 1; }
+  .featured-event { grid-column:span 1; }
   .footer-grid { grid-template-columns:1fr 1fr; }
   .gallery-grid { grid-template-columns:repeat(2,1fr); grid-template-rows:auto; }
   .g-cell:nth-child(1),.g-cell:nth-child(4) { grid-column:span 1; }
@@ -541,12 +649,12 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
   .dpanel-grid { grid-template-columns:1fr; }
   .events-grid { grid-template-columns:1fr; }
   .footer-grid { grid-template-columns:1fr; gap:40px; }
-  .stats-inner { grid-template-columns:repeat(2,1fr); }
   .gallery-grid { grid-template-columns:1fr 1fr; }
   .cdeco { display:none; }
   .join-form { flex-direction:column; }
   .join-input,.join-submit { width:100%; }
   .join-input { border-right:1px solid var(--bd); border-bottom:none; }
+  .events-header { flex-direction:column; align-items:center; text-align:center; }
 }
 
 /* ══════════════════════════════════
@@ -653,17 +761,17 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
       </div>
     </div>
 
-    <p class="hero-tagline">Pakistan's first <em>all-in-one youth experience platform</em> — Lahore, Pakistan</p>
+    <p class="hero-tagline">Pakistan's <em>#1 Youth Experience Platform</em> — Lahore, Pakistan</p>
 
     <div class="hero-meta">
       <div class="hm-dot"></div>
-      <div class="hm-txt">Muharrik Escapes</div>
+      <div class="hm-txt">Muharriq Escapes</div>
       <div class="hm-dot"></div>
-      <div class="hm-txt">Muharrik Nights</div>
+      <div class="hm-txt">Muharriq Nights</div>
       <div class="hm-dot"></div>
-      <div class="hm-txt">Muharrik Café</div>
+      <div class="hm-txt">Muharriq Café</div>
       <div class="hm-dot"></div>
-      <div class="hm-txt">Muharrik Fit</div>
+      <div class="hm-txt">Muharriq Fit</div>
       <div class="hm-dot"></div>
     </div>
 
@@ -690,24 +798,21 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
     <div class="about-left">
       <div class="about-big-q reveal rd1">محرِّق</div>
       <p class="reveal rd2">MUHARRIQ — <strong>the one who sets things in motion</strong> — was born from a single conviction: Pakistan's youth are extraordinary, and they deserve extraordinary experiences.</p>
-      <p class="reveal rd3">Founded by the former NMO President of <strong>IFMSA-Pakistan</strong> — one of the world's largest student medical organisations — MUHARRIQ brings event management mastery, national networks, and deep empathy for student life into one unified platform.</p>
+      <p class="reveal rd3">We bring event management mastery, national networks, and deep empathy for student life into one unified platform.</p>
       <p class="reveal rd4">We exist across four domains — adventure, social, wellness, and education — each designed to give ambitious young people in Lahore a richer, fuller life beyond their textbooks.</p>
     </div>
     <div class="about-right">
       <div class="about-card reveal rd2">
-        <div class="about-stat" data-target="300000">0</div>
-        <h4>Students in Lahore</h4>
-        <p>Across medical colleges, engineering universities, and liberal arts institutions — this is our community.</p>
+        <h4>Our Mission</h4>
+        <p>To create Pakistan's most trusted youth experience platform, where every event builds community, confidence, and unforgettable memories.</p>
       </div>
       <div class="about-card reveal rd3">
-        <div class="about-stat" data-target="4">0</div>
-        <h4>Experience Domains</h4>
-        <p>Escapes · Nights · Café · Fit — each a distinct world, all united by the MUHARRIQ promise.</p>
+        <h4>Our Vision</h4>
+        <p>A Pakistan where every young person has access to premium, safe, and transformative experiences that shape who they become.</p>
       </div>
       <div class="about-card reveal rd4">
-        <div class="about-stat" data-target="5">0</div>
-        <h4>Years IFMSA Experience</h4>
-        <p>Unmatched event management credibility, built leading Pakistan's largest student medical organisation.</p>
+        <h4>Our Promise</h4>
+        <p>Safety first. Premium quality. Student-friendly prices. Culturally intelligent. Always evolving with our community.</p>
       </div>
     </div>
   </div>
@@ -743,29 +848,9 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
           <div class="dp-eyebrow">Domain 01 — Muharriq Escapes</div>
           <h3 class="dp-title">Trip-Based<br>Activities &amp; Workshops</h3>
           <p class="dp-desc">Day trips and overnight adventures with embedded skill workshops. Premium experiences, accessible prices.</p>
-          <div class="dp-price-tag">
-            <span class="dp-price-from">From</span>
-            <span class="dp-price-amt">PKR 1,800</span>
-            <span class="dp-price-unit">/ person</span>
-          </div>
-          <a href="#contact" class="dp-link">Book Your Escape</a>
         </div>
-        <div class="dpanel-list">
-          <div class="dpanel-act"><div class="dpa-num">01</div><div class="dpa-name">Khewra Salt Mines Day Trip</div><div class="dpa-detail">Team challenge + underground exploration · PKR 2,800</div></div>
-          <div class="dpanel-act"><div class="dpa-num">02</div><div class="dpa-name">Kallar Kahar Sunrise</div><div class="dpa-detail">Journaling + goal-setting workshop · PKR 2,200</div></div>
-          <div class="dpanel-act"><div class="dpa-num">03</div><div class="dpa-name">Murree Overnight Retreat</div><div class="dpa-detail">2-day confidence &amp; communication bootcamp · PKR 10,500</div></div>
-          <div class="dpanel-act"><div class="dpa-num">04</div><div class="dpa-name">Rohtas Fort Heritage Hike</div><div class="dpa-detail">Leadership workshop + photography · PKR 3,200</div></div>
-          <div class="dpanel-act"><div class="dpa-num">05</div><div class="dpa-name">Nathia Gali Trek</div><div class="dpa-detail">Resilience + mental strength intensive · PKR 4,500</div></div>
-          <div class="dpanel-act"><div class="dpa-num">06</div><div class="dpa-name">Shogran Digital Detox</div><div class="dpa-detail">3-day vision board + clarity retreat · PKR 22,000</div></div>
-        </div>
-        <div class="dpanel-extra">
-          <div class="dpx-stat"><div class="dpx-n">20+</div><div class="dpx-l">trips yearly</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n">40%</div><div class="dpx-l">net margin</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n">PKR 240K</div><div class="dpx-l">avg. monthly revenue</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n">All inclusive</div><div class="dpx-l">transport · meals · workshops</div></div>
+        <div class="dp-mission">
+          <p>"Adventure that transforms. Every trip is designed to build resilience, create connections, and leave you with stories worth telling."</p>
         </div>
       </div>
     </div>
@@ -778,25 +863,9 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
           <div class="dp-eyebrow" style="color:#a98af5;">Domain 02 — Muharriq Nights</div>
           <h3 class="dp-title">Parties &amp;<br>Social Events</h3>
           <p class="dp-desc">Safe, themed, curated social experiences. The only event brand in Lahore students can attend with their parents' blessing.</p>
-          <div class="dp-price-tag"><span class="dp-price-from">From</span><span class="dp-price-amt">PKR 800</span><span class="dp-price-unit">/ ticket</span></div>
-          <a href="#contact" class="dp-link" style="color:#a98af5;border-bottom-color:rgba(169,138,245,.3);">Reserve Your Spot</a>
         </div>
-        <div class="dpanel-list">
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">01</div><div class="dpa-name">Galaxy Night — Themed Dance Party</div><div class="dpa-detail">150–250 pax · Corvetto Garage DHA · PKR 2,000</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">02</div><div class="dpa-name">Open Mic Night</div><div class="dpa-detail">Comedy · Poetry · Music · 100 pax · PKR 1,000</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">03</div><div class="dpa-name">Neon Medics Night</div><div class="dpa-detail">Med-student exclusive · UV themed · PKR 1,800</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">04</div><div class="dpa-name">Speed Friending Event</div><div class="dpa-detail">Structured icebreakers · 80 pax · PKR 900</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">05</div><div class="dpa-name">Annual Muharriq Gala</div><div class="dpa-detail">Flagship 300+ event · All domains · PKR 4,000</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#a98af5;">06</div><div class="dpa-name">Cultural Fusion Night</div><div class="dpa-detail">Celebrating Pakistan's diversity · PKR 1,200</div></div>
-        </div>
-        <div class="dpanel-extra">
-          <div class="dpx-stat"><div class="dpx-n" style="color:#a98af5;">2/mo</div><div class="dpx-l">events hosted</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#a98af5;">Safe</div><div class="dpx-l">ID-verified entry</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#a98af5;">PKR 400K</div><div class="dpx-l">avg. event gross</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#a98af5;">43%</div><div class="dpx-l">of total revenue</div></div>
+        <div class="dp-mission">
+          <p>"Social connection done right. Safe spaces where you can be yourself, meet new people, and create memories that last a lifetime."</p>
         </div>
       </div>
     </div>
@@ -809,25 +878,9 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
           <div class="dp-eyebrow" style="color:#5dd6cc;">Domain 03 — Muharriq Café</div>
           <h3 class="dp-title">Café-Based<br>Workshops</h3>
           <p class="dp-desc">Intimate, cozy workshops in Lahore's finest cafés. Accessible, affordable, shareable — and genuinely transformative.</p>
-          <div class="dp-price-tag"><span class="dp-price-from">From</span><span class="dp-price-amt">PKR 700</span><span class="dp-price-unit">incl. 1 drink</span></div>
-          <a href="#contact" class="dp-link" style="color:#5dd6cc;border-bottom-color:rgba(93,214,204,.3);">Reserve A Seat</a>
         </div>
-        <div class="dpanel-list">
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">01</div><div class="dpa-name">Breaking the Mental Health Stigma</div><div class="dpa-detail">Psychologist-led · 25 attendees · PKR 900</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">02</div><div class="dpa-name">Study Smarter — Med Student Edition</div><div class="dpa-detail">Evidence-based techniques · PKR 800</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">03</div><div class="dpa-name">CV &amp; LinkedIn Masterclass</div><div class="dpa-detail">Personal branding for students · PKR 1,200</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">04</div><div class="dpa-name">Burnout Prevention Workshop</div><div class="dpa-detail">For high-achieving students · PKR 900</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">05</div><div class="dpa-name">Financial Literacy 101</div><div class="dpa-detail">Student money management · PKR 700</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#5dd6cc;">06</div><div class="dpa-name">Monthly Subscription Pass</div><div class="dpa-detail">4 workshops/month · PKR 3,500</div></div>
-        </div>
-        <div class="dpanel-extra">
-          <div class="dpx-stat"><div class="dpx-n" style="color:#5dd6cc;">3/mo</div><div class="dpx-l">workshops</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#5dd6cc;">65%</div><div class="dpx-l">net margin</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#5dd6cc;">Lowest</div><div class="dpx-l">cost domain</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#5dd6cc;">Instagram</div><div class="dpx-l">-worthy setups</div></div>
+        <div class="dp-mission">
+          <p>"Learning that feels like coffee with friends. Practical skills, real conversations, and takeaways you'll actually use."</p>
         </div>
       </div>
     </div>
@@ -839,26 +892,10 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
           <div class="dp-icon-wrap"><svg viewBox="0 0 100 140" fill="none"><defs><radialGradient id="ffg1" cx="45%" cy="80%" r="65%"><stop offset="0%" stop-color="#fde68a"/><stop offset="40%" stop-color="#d97706"/><stop offset="100%" stop-color="#451a03"/></radialGradient></defs><path d="M50 130 C36 116 32 96 38 76 C44 92 54 102 66 100 C60 86 62 70 70 58 C74 76 72 98 64 114 C76 98 80 76 74 54 C86 70 88 96 80 114 Z" fill="url(#ffg1)" opacity="0.95"/><path d="M50 128 C40 114 38 96 44 80 C48 94 56 102 64 100 Z" fill="#fde68a" opacity="0.6"/></svg></div>
           <div class="dp-eyebrow" style="color:#e8b84b;">Domain 04 — Muharriq Fit</div>
           <h3 class="dp-title">Health &amp; Wellness<br>Workshops</h3>
-          <p class="dp-desc">Certifiable, skill-based health education. BLS certification is the most-needed and least-available offering for medical students in Lahore.</p>
-          <div class="dp-price-tag"><span class="dp-price-from">From</span><span class="dp-price-amt">PKR 1,200</span><span class="dp-price-unit">/ person</span></div>
-          <a href="#contact" class="dp-link" style="color:#e8b84b;border-bottom-color:rgba(232,184,75,.3);">Book Your Spot</a>
+          <p class="dp-desc">Certifiable, skill-based health education. Essential skills for students, taught by experts.</p>
         </div>
-        <div class="dpanel-list">
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">01</div><div class="dpa-name">BLS Certification Workshop</div><div class="dpa-detail">AHA-standard · 4hr hands-on · PKR 3,000</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">02</div><div class="dpa-name">First Aid &amp; Emergency Response</div><div class="dpa-detail">2hr practical training · PKR 1,500</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">03</div><div class="dpa-name">Yoga for Exam Season</div><div class="dpa-detail">90min mindfulness + stretching · PKR 1,000</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">04</div><div class="dpa-name">Nutrition Basics for Busy Students</div><div class="dpa-detail">RD-led 2hr masterclass · PKR 1,200</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">05</div><div class="dpa-name">Mental Health First Aid</div><div class="dpa-detail">Peer support training · PKR 1,800</div></div>
-          <div class="dpanel-act"><div class="dpa-num" style="color:#e8b84b;">06</div><div class="dpa-name">Sleep Science Workshop</div><div class="dpa-detail">Critical for med students · PKR 1,000</div></div>
-        </div>
-        <div class="dpanel-extra">
-          <div class="dpx-stat"><div class="dpx-n" style="color:#e8b84b;">2/mo</div><div class="dpx-l">BLS sessions</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#e8b84b;">KEMU</div><div class="dpx-l">faculty partners</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#e8b84b;">PKR 180K</div><div class="dpx-l">avg. BLS monthly rev</div></div>
-          <div class="dpx-divider"></div>
-          <div class="dpx-stat"><div class="dpx-n" style="color:#e8b84b;">Untapped</div><div class="dpx-l">niche in Lahore</div></div>
+        <div class="dp-mission">
+          <p>"Wellness that works for your life. Practical health education that fits into a student's schedule and actually matters."</p>
         </div>
       </div>
     </div>
@@ -868,121 +905,43 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
 
 <div class="h-div"></div>
 
-<!-- ═══ STATS ═══ -->
-<div class="stats-section">
-  <div class="stats-inner">
-    <div class="stat-block reveal"><div class="stat-num"><span class="counter" data-target="25000">0</span><span>+</span></div><div class="stat-label">Medical Students</div><div class="stat-sub">in Lahore alone</div></div>
-    <div class="stat-block reveal rd1"><div class="stat-num">PKR<span class="counter" data-target="4.8">0</span><span>M</span></div><div class="stat-label">Year 1 Revenue Target</div><div class="stat-sub">conservative estimate</div></div>
-    <div class="stat-block reveal rd2"><div class="stat-num"><span class="counter" data-target="300">0</span><span>K+</span></div><div class="stat-label">University Students</div><div class="stat-sub">total Lahore addressable market</div></div>
-    <div class="stat-block reveal rd3"><div class="stat-num"><span class="counter" data-target="3">0</span></div><div class="stat-label">Month Break-Even</div><div class="stat-sub">from first paid event</div></div>
-  </div>
-</div>
-
-<!-- ═══ UPCOMING EVENTS ═══ -->
+<!-- ═══ EVENTS SECTION WITH ADD EVENT FUNCTIONALITY ═══ -->
 <section id="events">
 <div class="section-wrap">
-  <div class="eyebrow reveal"><div class="eyebrow-line"></div><div class="eyebrow-text">Upcoming Events</div><div class="eyebrow-num">03</div></div>
-  <h2 class="sec-title reveal rd1">What's On</h2>
-  <p class="sec-sub reveal rd2">Every event is an invitation to become more than you were yesterday.</p>
-
-  <div class="events-grid">
-    <div class="event-card featured reveal rd1">
-      <div class="event-img">
-        <div class="event-img-bg" style="background:linear-gradient(135deg,#1a0e08 0%,#2d1206 50%,#0a0a06 100%);position:relative;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(232,83,26,.25) 0%,transparent 65%);"></div>
-          <svg viewBox="0 0 100 140" fill="none" style="width:80px;height:112px;filter:drop-shadow(0 0 30px rgba(232,83,26,.6));position:relative;z-index:1;"><defs><radialGradient id="evfg1" cx="45%" cy="80%" r="65%"><stop offset="0%" stop-color="#FF9B5C"/><stop offset="40%" stop-color="#E8531A"/><stop offset="100%" stop-color="#8C2200"/></radialGradient></defs><path d="M50 130 C36 116 32 96 38 76 C44 92 54 102 66 100 C60 86 62 70 70 58 C74 76 72 98 64 114 C76 98 80 76 74 54 C86 70 88 96 80 114 Z" fill="url(#evfg1)" opacity="0.95"/><path d="M50 128 C40 114 38 96 44 80 C48 94 56 102 64 100 Z" fill="#FFD080" opacity="0.6"/></svg>
-        </div>
-        <span class="event-badge escape">MUHARRIQ ESCAPES</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">Saturday · 14 June 2025</div>
-        <div class="event-title">Khewra Salt Mines — Leadership Day Trip</div>
-        <div class="event-venue">Khewra, Punjab · 7:00 AM departure</div>
-        <div class="event-footer">
-          <div class="event-price">PKR 2,800<span> / person</span></div>
-          <a href="#contact" class="event-ticket"><span>Register Now</span></a>
-        </div>
-      </div>
+  <div class="events-header">
+    <div>
+      <div class="eyebrow reveal"><div class="eyebrow-line"></div><div class="eyebrow-text">Upcoming Events</div><div class="eyebrow-num">03</div></div>
+      <h2 class="sec-title reveal rd1">What's On</h2>
+      <p class="sec-sub reveal rd2">Every event is an invitation to become more than you were yesterday.</p>
     </div>
+    <button class="add-event-btn" onclick="openAddEventModal()">+ Add New Event</button>
+  </div>
 
-    <div class="event-card reveal rd2">
-      <div class="event-img">
-        <div class="event-img-bg" style="background:linear-gradient(135deg,#0d0618 0%,#1a0838 50%,#0a0014 100%);position:relative;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(124,58,237,.3) 0%,transparent 65%);"></div>
-          <div style="font-size:48px;opacity:.6;position:relative;z-index:1;">🌙</div>
-        </div>
-        <span class="event-badge night">MUHARRIQ NIGHTS</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">Friday · 20 June 2025</div>
-        <div class="event-title">Neon Medics Night</div>
-        <div class="event-venue">Corvetto Garage, DHA Lahore</div>
-        <div class="event-footer">
-          <div class="event-price">PKR 1,800<span> / ticket</span></div>
-          <a href="#contact" class="event-ticket"><span>Get Tickets</span></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card reveal rd3">
-      <div class="event-img">
-        <div class="event-img-bg" style="background:linear-gradient(135deg,#020f0e 0%,#062a28 50%,#010806 100%);position:relative;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(13,148,136,.25) 0%,transparent 65%);"></div>
-          <div style="font-size:48px;opacity:.6;position:relative;z-index:1;">☕</div>
-        </div>
-        <span class="event-badge cafe">MUHARRIQ CAFÉ</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">Wednesday · 25 June 2025</div>
-        <div class="event-title">BLS Certification Workshop</div>
-        <div class="event-venue">Andaaz Café, Gulberg · 10:00 AM</div>
-        <div class="event-footer">
-          <div class="event-price">PKR 3,000<span> + cert</span></div>
-          <a href="#contact" class="event-ticket"><span>Enrol Now</span></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card reveal rd1">
-      <div class="event-img">
-        <div class="event-img-bg" style="background:linear-gradient(135deg,#140a00 0%,#2a1500 50%,#0a0604 100%);position:relative;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(196,146,42,.2) 0%,transparent 65%);"></div>
-          <div style="font-size:48px;opacity:.6;position:relative;z-index:1;">🏔️</div>
-        </div>
-        <span class="event-badge fit">MUHARRIQ FIT</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">Saturday · 5 July 2025</div>
-        <div class="event-title">Murree Overnight Retreat</div>
-        <div class="event-venue">Murree · 2-day wellness bootcamp</div>
-        <div class="event-footer">
-          <div class="event-price">PKR 10,500<span> all-incl</span></div>
-          <a href="#contact" class="event-ticket"><span>Reserve Now</span></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="event-card reveal rd2">
-      <div class="event-img">
-        <div class="event-img-bg" style="background:linear-gradient(135deg,#0d0618 0%,#1a0838 50%,#0a0014 100%);position:relative;">
-          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(124,58,237,.2) 0%,transparent 65%);"></div>
-          <div style="font-size:48px;opacity:.6;position:relative;z-index:1;">🎤</div>
-        </div>
-        <span class="event-badge night">MUHARRIQ NIGHTS</span>
-      </div>
-      <div class="event-body">
-        <div class="event-date">Friday · 11 July 2025</div>
-        <div class="event-title">Open Mic Night — Vol. 3</div>
-        <div class="event-venue">Alhamra Cultural Complex, Lahore</div>
-        <div class="event-footer">
-          <div class="event-price">PKR 1,000<span> / ticket</span></div>
-          <a href="#contact" class="event-ticket"><span>Get Tickets</span></a>
-        </div>
-      </div>
-    </div>
+  <div class="events-grid" id="eventsGrid">
+    <!-- Events will be loaded dynamically -->
   </div>
 </div>
 </section>
+
+<!-- Add Event Modal -->
+<div id="addEventModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeAddEventModal()">&times;</span>
+    <h3>Add New Event</h3>
+    <input type="text" id="eventTitle" placeholder="Event Title" required>
+    <input type="text" id="eventDate" placeholder="Date (e.g., Saturday · 14 June 2025)" required>
+    <input type="text" id="eventVenue" placeholder="Venue" required>
+    <input type="text" id="eventPrice" placeholder="Price (e.g., PKR 2,800)" required>
+    <select id="eventDomain">
+      <option value="escape">Muharriq Escapes</option>
+      <option value="night">Muharriq Nights</option>
+      <option value="cafe">Muharriq Café</option>
+      <option value="fit">Muharriq Fit</option>
+    </select>
+    <textarea id="eventDescription" placeholder="Short description (optional)"></textarea>
+    <button onclick="addNewEvent()">Add Event</button>
+  </div>
+</div>
 
 <div class="h-div"></div>
 
@@ -1013,19 +972,19 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
   <div class="testimonials-wrap reveal rd2">
     <div class="testimonials-track" id="tTrack">
       <div class="testimonial">
-        <p class="t-quote">"I walked into the Khewra trip as a burnout 4th-year student. I walked out with a vision board, three new friends, and the clearest I'd felt in two years."</p>
+        <p class="t-quote">"The Khewra trip was incredible! I walked out with three new friends and the clearest I'd felt in months."</p>
         <div class="t-author"><div class="t-name">Fatima Malik</div><div class="t-role">4th Year MBBS · KEMU</div><div class="t-rule"></div></div>
       </div>
       <div class="testimonial">
-        <p class="t-quote">"The BLS workshop was the most practical thing I've done in my entire medical education. The certification, the hands-on training — I actually feel prepared now."</p>
+        <p class="t-quote">"The BLS workshop was the most practical thing I've done. The certification, the hands-on training — I actually feel prepared now."</p>
         <div class="t-author"><div class="t-name">Ahmed Raza</div><div class="t-role">3rd Year MBBS · SIMS</div><div class="t-rule"></div></div>
       </div>
       <div class="testimonial">
-        <p class="t-quote">"Neon Medics Night was the first party I've ever been to where I actually felt safe — and had the time of my life. MUHARRIQ gets it."</p>
+        <p class="t-quote">"Neon Medics Night was the first party I've ever been to where I actually felt safe — and had the time of my life."</p>
         <div class="t-author"><div class="t-name">Zara Hussain</div><div class="t-role">2nd Year MBBS · FMH College</div><div class="t-rule"></div></div>
       </div>
       <div class="testimonial">
-        <p class="t-quote">"The mental health café workshop changed how I talk to my friends about their struggles. In 90 minutes. Over coffee. How is that possible?"</p>
+        <p class="t-quote">"The mental health workshop changed how I talk to my friends about their struggles. In 90 minutes. Over coffee."</p>
         <div class="t-author"><div class="t-name">Hassan Nawaz</div><div class="t-role">Final Year · LUMS</div><div class="t-rule"></div></div>
       </div>
     </div>
@@ -1045,9 +1004,9 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
   <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#1a0e08,#2d1206);"><div class="g-placeholder">🏕️</div></div><div class="g-overlay"><span>Muharriq Escapes</span></div><div class="g-placeholder-label">Khewra Salt Mines</div></div>
   <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#0d0618,#1a0838);"><div class="g-placeholder">🌙</div></div><div class="g-overlay"><span>Muharriq Nights</span></div><div class="g-placeholder-label">Neon Medics Night</div></div>
   <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#020f0e,#062a28);"><div class="g-placeholder">☕</div></div><div class="g-overlay"><span>Muharriq Café</span></div><div class="g-placeholder-label">Mental Health Workshop</div></div>
-  <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#141000,#2a2000);"><div class="g-placeholder">💪</div></div><div class="g-overlay"><span>Muharriq Fit</span></div><div class="g-placeholder-label">BLS Certification</div></div>
+  <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#141000,#2a2000);"><div class="g-placeholder">💪</div></div><div class="g-overlay"><span>Muharriq Fit</span></div><div class="g-placeholder-label">Wellness Session</div></div>
   <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#080410,#160a2a);"><div class="g-placeholder">🎤</div></div><div class="g-overlay"><span>Open Mic Night</span></div></div>
-  <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#040a0a,#081a18);"><div class="g-placeholder">🏔️</div></div><div class="g-overlay"><span>Murree Retreat</span></div></div>
+  <div class="g-cell"><div class="g-cell-inner" style="background:linear-gradient(135deg,#040a0a,#081a18);"><div class="g-placeholder">🏔️</div></div><div class="g-overlay"><span>Mountain Retreat</span></div></div>
 </div>
 
 <!-- ═══ JOIN / CTA ═══ -->
@@ -1091,7 +1050,7 @@ footer::before { content:''; position:absolute; inset:0; background:radial-gradi
         <svg viewBox="0 0 100 140" fill="none"><defs><radialGradient id="ftg1" cx="45%" cy="80%" r="65%"><stop offset="0%" stop-color="#FF9B5C"/><stop offset="40%" stop-color="#E8531A"/><stop offset="100%" stop-color="#8C2200"/></radialGradient></defs><path d="M50 130 C36 116 32 96 38 76 C44 92 54 102 66 100 C60 86 62 70 70 58 C74 76 72 98 64 114 Z" fill="url(#ftg1)" opacity="0.95"/><path d="M50 128 C40 114 38 96 44 80 C48 94 56 102 64 100 Z" fill="#FFD080" opacity="0.6"/></svg>
         <div class="footer-logo-text">MUHARRIQ<span>.</span></div>
       </div>
-      <p>Pakistan's first all-in-one youth experience platform. Connecting ambitious students with adventures, social events, workshops, and certifications — all under one trusted brand.</p>
+      <p>Pakistan's #1 all-in-one youth experience platform. Connecting ambitious students with adventures, social events, workshops, and certifications — all under one trusted brand.</p>
       <p class="footer-tagline-txt">"This brand was made for me."</p>
     </div>
     <div class="footer-col">
@@ -1142,7 +1101,7 @@ const curR = document.getElementById('curRing');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
 (function loop(){ rx+=(mx-rx)*.1; ry+=(my-ry)*.1; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.querySelectorAll('a,button,.about-card,.event-card,.dpanel-act,.exp-pill,.stat-block,.g-cell').forEach(el=>{
+document.querySelectorAll('a,button,.about-card,.event-card,.dpanel-act,.exp-pill,.g-cell').forEach(el=>{
   el.addEventListener('mouseenter',()=>{ cur.classList.add('expand'); curR.classList.add('expand'); });
   el.addEventListener('mouseleave',()=>{ cur.classList.remove('expand'); curR.classList.remove('expand'); });
 });
@@ -1172,25 +1131,6 @@ const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('vis'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-/* ── COUNTER ANIMATION ── */
-function animateCounter(el) {
-  const target = parseFloat(el.getAttribute('data-target'));
-  const isDecimal = target % 1 !== 0;
-  const duration = 1800;
-  const step = duration / 60;
-  let current = 0;
-  const inc = target / (duration / step);
-  const timer = setInterval(() => {
-    current += inc;
-    if(current >= target) { current = target; clearInterval(timer); }
-    el.textContent = isDecimal ? current.toFixed(1) : Math.round(current).toLocaleString();
-  }, step);
-}
-const counterObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); } });
-}, { threshold: 0.5 });
-document.querySelectorAll('.counter, .about-stat').forEach(el => counterObs.observe(el));
 
 /* ── DOMAIN TABS ── */
 function switchDomain(id, btn) {
@@ -1283,6 +1223,160 @@ window.addEventListener('scroll',()=>{
     r.style.transform=`translate(-50%,-50%) rotate(${sy*(i+1)*.02}deg)`;
   });
 });
+
+/* ── EVENT MANAGEMENT SYSTEM ── */
+let events = [
+  {
+    id: 1,
+    title: "Khewra Salt Mines — Leadership Day Trip",
+    date: "Saturday · 14 June 2025",
+    venue: "Khewra, Punjab · 7:00 AM departure",
+    price: "PKR 2,800",
+    domain: "escape",
+    description: "Team challenge + underground exploration"
+  },
+  {
+    id: 2,
+    title: "Neon Medics Night",
+    date: "Friday · 20 June 2025",
+    venue: "Corvetto Garage, DHA Lahore",
+    price: "PKR 1,800",
+    domain: "night",
+    description: "Med-student exclusive · UV themed"
+  },
+  {
+    id: 3,
+    title: "BLS Certification Workshop",
+    date: "Wednesday · 25 June 2025",
+    venue: "Andaaz Café, Gulberg · 10:00 AM",
+    price: "PKR 3,000",
+    domain: "cafe",
+    description: "AHA-standard certification"
+  }
+];
+
+let nextId = 4;
+
+function renderEvents() {
+  const grid = document.getElementById('eventsGrid');
+  if (!grid) return;
+  
+  if (events.length === 0) {
+    grid.innerHTML = '<div class="empty-events">No events scheduled yet. Click "Add New Event" to create your first event!</div>';
+    return;
+  }
+  
+  grid.innerHTML = events.map(event => `
+    <div class="event-card ${events.indexOf(event) === 0 ? 'featured-event' : ''}">
+      <div class="event-img">
+        <div class="event-img-bg" style="background:linear-gradient(135deg,${getDomainGradient(event.domain)});position:relative;">
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(232,83,26,.25) 0%,transparent 65%);"></div>
+          <div style="font-size:48px;opacity:.6;position:relative;z-index:1;">${getDomainIcon(event.domain)}</div>
+        </div>
+        <span class="event-badge ${event.domain}">MUHARRIQ ${getDomainName(event.domain).toUpperCase()}</span>
+        <div class="delete-event" onclick="deleteEvent(${event.id})">×</div>
+      </div>
+      <div class="event-body">
+        <div class="event-date">${event.date}</div>
+        <div class="event-title">${event.title}</div>
+        <div class="event-venue">${event.venue}</div>
+        <div class="event-footer">
+          <div class="event-price">${event.price}<span> / person</span></div>
+          <a href="#contact" class="event-ticket"><span>Register Now</span></a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function getDomainGradient(domain) {
+  const gradients = {
+    escape: '#1a0e08 0%,#2d1206 50%,#0a0a06 100%',
+    night: '#0d0618 0%,#1a0838 50%,#0a0014 100%',
+    cafe: '#020f0e 0%,#062a28 50%,#010806 100%',
+    fit: '#140a00 0%,#2a1500 50%,#0a0604 100%'
+  };
+  return gradients[domain] || gradients.escape;
+}
+
+function getDomainIcon(domain) {
+  const icons = {
+    escape: '🏕️',
+    night: '🌙',
+    cafe: '☕',
+    fit: '💪'
+  };
+  return icons[domain] || '🎉';
+}
+
+function getDomainName(domain) {
+  const names = {
+    escape: 'Escapes',
+    night: 'Nights',
+    cafe: 'Café',
+    fit: 'Fit'
+  };
+  return names[domain] || 'Events';
+}
+
+function openAddEventModal() {
+  document.getElementById('addEventModal').classList.add('active');
+}
+
+function closeAddEventModal() {
+  document.getElementById('addEventModal').classList.remove('active');
+  document.getElementById('eventTitle').value = '';
+  document.getElementById('eventDate').value = '';
+  document.getElementById('eventVenue').value = '';
+  document.getElementById('eventPrice').value = '';
+  document.getElementById('eventDomain').value = 'escape';
+  document.getElementById('eventDescription').value = '';
+}
+
+function addNewEvent() {
+  const title = document.getElementById('eventTitle').value;
+  const date = document.getElementById('eventDate').value;
+  const venue = document.getElementById('eventVenue').value;
+  const price = document.getElementById('eventPrice').value;
+  const domain = document.getElementById('eventDomain').value;
+  const description = document.getElementById('eventDescription').value;
+  
+  if (!title || !date || !venue || !price) {
+    alert('Please fill in all required fields');
+    return;
+  }
+  
+  const newEvent = {
+    id: nextId++,
+    title: title,
+    date: date,
+    venue: venue,
+    price: price,
+    domain: domain,
+    description: description || 'Join us for an amazing experience!'
+  };
+  
+  events.push(newEvent);
+  renderEvents();
+  closeAddEventModal();
+}
+
+function deleteEvent(id) {
+  if (confirm('Are you sure you want to delete this event?')) {
+    events = events.filter(event => event.id !== id);
+    renderEvents();
+  }
+}
+
+// Close modal when clicking outside
+document.getElementById('addEventModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeAddEventModal();
+  }
+});
+
+// Initial render
+renderEvents();
 </script>
 </body>
 </html>
